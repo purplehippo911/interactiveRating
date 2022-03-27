@@ -13,17 +13,6 @@
   --DarkBlue: hsl(213, 19%, 18%);
 }
 
-* {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-script,
-title {
-  display: none;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -43,10 +32,9 @@ body {
   display: flex;
   flex-direction: column;
   align-self: center;
-  display: hidden;
   opacity: 0;
 }
-#dialog .active {
+#dialog.active {
   display: block;
   opacity: 1;
 }

@@ -1,14 +1,19 @@
 const openDialog = document.querySelector('.submit');
 const closeDialog = document.querySelector('#dialog > h2');
 const dialog = document.querySelector('#dialog');
-const rating = document.querySelectorAll('.rating');
+const ratingButtons = document.querySelectorAll('.rating > button');
+const rateSpan = document.querySelector('.rate');
 
-openDialog.addEventListener('click', (e) => {
-    dialog.showModal();
-    dialog.classList.add('.active');
-    console.log(e);
+ratingButtons.forEach((button) => button.addEventListener('click', () => {
+    const rateNumber = this.textContent;
+    console.log(rateNumber)
+}));
+
+
+openDialog.addEventListener('click', () => {
+    dialog.classList.add('active');
 })
 
 closeDialog.addEventListener('click', () => {
-    dialog.close()
+    dialog.classList.remove('active')
 })
