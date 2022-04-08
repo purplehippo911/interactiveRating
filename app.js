@@ -1,19 +1,19 @@
 const openDialog = document.querySelector('.submit');
-const closeDialog = document.querySelector('#dialog > h2');
 const dialog = document.querySelector('#dialog');
-const ratingButtons = document.querySelectorAll('.rating > button');
+const buttons = document.querySelectorAll('.button');
 const rateSpan = document.querySelector('.rate');
+let number;
 
-ratingButtons.forEach((button) => button.addEventListener('click', () => {
-    const rateNumber = this.textContent;
-    console.log(rateNumber)
-}));
-
+buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            number = buttons.innerHTML;
+            console.log(number);
+            number = rateSpan.textContent;
+        });
+    });
 
 openDialog.addEventListener('click', () => {
-    dialog.classList.add('active');
-})
-
-closeDialog.addEventListener('click', () => {
-    dialog.classList.remove('active')
+    if (number > 0) {
+        dialog.classList.add('active');
+    }
 })

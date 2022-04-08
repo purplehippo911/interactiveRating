@@ -12,54 +12,40 @@
   --mediumGrey: hsl(216, 12%, 54%);
   --DarkBlue: hsl(213, 19%, 18%);
 }
+* {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-decoration:none;
+}
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--main-bg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#dialog {
-  min-width: 15rem;
-  max-width: 25rem;
-  height: 20rem;
-  background-color: var(--DarkBlue);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  opacity: 0;
-}
-#dialog.active {
-  display: block;
-  opacity: 1;
-}
-
-#dialog::backdrop {
+  height:100vh;
+  display:flex;
   background-color: var(--main-bg);
 }
 
 .container {
-  min-width: 15rem;
-  max-width: 25rem;
-  min-height: 20rem;
-  max-height: 30rem;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: var(--DarkBlue);
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-  top: 150px;
+  justify-items:center;
+  align-self: center;
+  max-width:1400px;
+  display:flex;
+  flex-direction:column;
 }
-img[alt="star"] {
+.card {
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--DarkBlue);
+
+
+}
+
+.card > img {
   padding: 10px;
   margin: 5px;
-  background-color: var(--mediumGrey);
+  background-color: hsl(216, 12%, 27%);
   border-radius: 20px;
 }
 
@@ -75,10 +61,24 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: var(--DarkBlue);
-  color: var(--mediumGrey);
+  border: 0;
+  border-radius: 20px;
+  color: var(--lightGrey);
 }
 
+.rating > button {
+  width: 12%;
+  padding: 10px;
+  border-radius: 20px;
+  border:0;
+  background-color: hsl(216, 12%, 27%);
+  transition: 0.9s;
+}
+
+.rating > .button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
 .submit {
   border: 0;
   background-color: var(--orange);
@@ -88,4 +88,31 @@ p {
   margin: 20px;
   border-radius: 20px;
   text-transform: uppercase;
+  transition: 0.7s ease;
+}
+
+.submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+#dialog {
+  max-width: 44rem;
+  min-height: 20rem;
+  background-color: var(--DarkBlue);
+  color:white;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  opacity:0;
+}
+#dialog.active {
+  display: block;
+  opacity: 1;
+}
+
+
+#dialog::backdrop {
+  background-color: var(--main-bg);
 }

@@ -16,51 +16,52 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <!-- Rating state start -->
     <div class="container">
-      <img src="images/icon-star.svg" alt="star" />
-      <br />
-      <h1>How did we do?</h1>
-      <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <div class="rating">
-        <button class="rating rating1">1</button>
-        <button class="rating rating2">2</button>
-        <button class="rating rating3">3</button>
-        <button class="rating rating4">4</button>
-        <button class="rating rating5">5</button>
+      <!-- Rating state start -->
+      <div class="card">
+        <img src="images/icon-star.svg" alt="star" />
+        <br />
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="rating">
+          <button class="button" href="#">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button">4</button>
+          <button class="button">5</button>
+        </div>
+        <button type="submit" class="submit">Submit</button>
       </div>
-      <button type="submit" class="submit">Submit</button>
+
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <!-- Add rating here -->
+      <dialog id="dialog">
+        <img src="images/illustration-thank-you.svg" />
+        <h2>
+          You selected
+          <span id="rate"></span>
+          out of five.
+        </h2>
+        <h1>Thank you!</h1>
+        <p id="dialog_info">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </dialog>
+      <!-- Thank you state end -->
+
+      <footer class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </footer>
     </div>
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-    <!-- Add rating here -->
-    <dialog id="dialog">
-      <img src="images/illustration-thank-you.svg" />
-      <h2>
-        You selected
-        <span id="rate"></span>
-        out of five.
-      </h2>
-      <h1>Thank you!</h1>
-      <p id="dialog_info">
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
-      </p>
-    </dialog>
-
-    <!-- Thank you state end -->
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </footer>
     <script src="app.js"></script>
   </body>
 </html>
