@@ -8,7 +8,6 @@ buttons.forEach((button) => {
         button.addEventListener('click', () => {
             number = buttons.innerHTML;
             console.log(number);
-            number = rateSpan.textContent;
         });
     });
 
