@@ -42,8 +42,8 @@ Mobile:
 
 ### Links
 
-- Solution URL: [My solution](https://your-solution-url.com)
-- Live Site URL: [My live site](https://github.com/purplehippo911/interactiveRating)
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/interacitve-rating-component-with-flexbox-and-vanilla-js-SyxeY74Ec)
+- Live Site URL: [My live site](https://purplehippo911.github.io/interactiveRating/)
 
 ## My process
 
@@ -56,9 +56,8 @@ Mobile:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-****
-To see how you can add code snippets, see below:
+While I was doing this challenge I made sure to learn Flexbox and it helped me quite a lot to align the containers and items like I wanted. I learned a new html element called a `<dialog>` and I used that for the popup. 
+
 
 ```html
      <dialog id="dialog">
@@ -77,20 +76,37 @@ To see how you can add code snippets, see below:
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+    #dialog {
+      width:clamp(22rem, 50%, 25rem);
+      height:clamp(20rem, 70%, 25rem);
+      background-color: var(--DarkBlue);
+      position:relative;
+      display: flex;
+      justify-content:center;
+      text-align: center;
+      gap:5px;
+      border:0;
+      border-radius:10px;
+      display:none;
+      opacity:0;
+      transition:0.7s;
+    }
 ```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            number = button.innerHTML;
+            const htmlText = `<span>${number}</span> `;
+            ratediv.innerHTML = htmlText;
+
+        });
+    });
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts **you**'re still not completely comfortable with or techniques you found useful that you want **to** refine and perfect.
-
+I am planning on learning Grid and continuing on to the junior challenges at frontend mentor soon. I am thinking of making my own little website for fun, but I'm not sure. I'll hopefully do it.
 
 ### Useful resources
 
@@ -100,7 +116,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Discord - mashedapples222#7574
 - Frontend Mentor - [@purplehippo911](https://www.frontendmentor.io/profile/purplehippo911)
 - Github - [@purplehippo911](https://www.github.com/purplehippo911)
 
