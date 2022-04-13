@@ -34,25 +34,36 @@ body {
   max-height:90vh;
   min-width:370px;
   max-width:1400px;
-  border:1px solid red;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
 }
 .card {
-  min-width:20rem;
-  max-width:30rem;
-  height:20rem;
-  padding: 10px;
+  min-width:22rem;
+  max-width:25rem;
+  min-height:20rem;
+  max-height:25rem;
+  padding: 25px;
   border-radius: 5px;
   display:flex;
   flex-direction:column;
   background-color: var(--DarkBlue);
+  display:block;
+  opacity:1;
+  transition:0.7s;
+}
+
+.card.close {
+  display:none;
+}
+.card.close.transition{
+  opacity:0;
 }
 
 .card > img {
-  max-width:10%;
+  min-width:10%;
+  max-width:15%;
   padding: 10px;
   background-color: hsl(216, 12%, 27%);
   border-radius: 20px;
@@ -64,19 +75,18 @@ h1 {
 
 p {
   color: var(--lightGrey);
+  padding:10px;
 }
 
 .rating {
   display:flex;
   justify-content: center;
   gap:10px;
-  margin:10px;
   color: var(--lightGrey);
 }
 
 .rating a {
-  min-width:2rem;
-  /* min-width: 3rem; */
+  max-width:7rem;
   padding:8px;
   border-radius:20px;
   border:0;
@@ -91,11 +101,16 @@ p {
   color: var(--white);
   cursor:pointer;
 }
+
+.rating a:focus {
+  background-color: var(--lightGrey);
+}
+
 .submit {
   border: 0;
   background-color: var(--orange);
   color: var(--white);
-  width: 80%;
+  width: 90%;
   padding: 10px;
   margin: 20px;
   border-radius: 20px;
@@ -104,6 +119,11 @@ p {
   transition: 0.7s ease;
 }
 
+.submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor:pointer;
+}
 
 #dialog {
   min-height: 20rem;
@@ -117,20 +137,18 @@ p {
   text-align: center;
   display:none;
   opacity:0;
+  transition:0.7s;
 }
 #dialog.active {
   display: block;
+}
+
+#dialog.active.transition {
   opacity: 1;
 }
 
 #dialog::backdrop {
   background-color: var(--main-bg);
-}
-
-.submit:hover {
-  background-color: var(--white);
-  color: var(--orange);
-  cursor:pointer;
 }
 
 .attribution {
