@@ -3,6 +3,7 @@ const openDialog = document.querySelector('.submit');
 const dialog = document.querySelector('#dialog');
 const buttons = document.querySelectorAll('.button');
 const ratediv = document.querySelector('span');
+const h2 = document.querySelector('#dialog > h2');
 let number;
 
 buttons.forEach((button) => {
@@ -21,4 +22,12 @@ openDialog.addEventListener('click', () => {
         dialog.classList.add('active');
         dialog.classList.add('transition');
     }
+})
+
+// To close the dialog and bring back the card //
+h2.addEventListener('click', () => { 
+    card.classList.remove('close');
+    card.classList.remove('transition');
+    dialog.classList.remove('active');
+    dialog.classList.remove('transition');
 })

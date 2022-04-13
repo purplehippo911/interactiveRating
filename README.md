@@ -32,17 +32,17 @@ Users should be able to:
 ### Screenshot
 Desktop:
 
-![Desktop](.design/screenshot.jpg)
+![Desktop](screenshot/dekstop.png)
 
 Mobile:
 
-![Mobile](.design/screenshot.jpg)
+![Mobile](screenshot/mobile.png)
 
 
 
 ### Links
 
-- Solution URL: [Add  URL here](https://your-solution-url.com)
+- Solution URL: [My solution](https://your-solution-url.com)
 - Live Site URL: [My live site](https://github.com/purplehippo911/interactiveRating)
 
 ## My process

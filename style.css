@@ -11,6 +11,7 @@
   --lightGrey: hsl(217, 12%, 63%);
   --mediumGrey: hsl(216, 12%, 54%);
   --DarkBlue: hsl(213, 19%, 18%);
+  --bg-grey: hsl(216, 12%, 27%);
 }
 * {
   box-sizing: border-box;
@@ -30,22 +31,18 @@ body {
 }
 
 .container {
-  min-height:70vh;
-  max-height:90vh;
-  min-width:370px;
-  max-width:1400px;
+  width:clamp(370px, 50%, 1400px);
+  height:clamp(70vh, 60%, 90vh);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
 }
 .card {
-  min-width:22rem;
-  max-width:25rem;
-  min-height:20rem;
-  max-height:25rem;
+  width:clamp(22rem, 50%, 25rem);
+  height:clamp(20rem, 70%, 25rem);
   padding: 25px;
-  border-radius: 5px;
+  border-radius: 15px;
   display:flex;
   flex-direction:column;
   background-color: var(--DarkBlue);
@@ -57,15 +54,16 @@ body {
 .card.close {
   display:none;
 }
+
+/* For the transition */
 .card.close.transition{
   opacity:0;
 }
 
 .card > img {
-  min-width:10%;
-  max-width:15%;
+  min-width:15%;
   padding: 10px;
-  background-color: hsl(216, 12%, 27%);
+  background-color: var(--bg-grey);
   border-radius: 20px;
 }
 
@@ -74,6 +72,7 @@ h1 {
 }
 
 p {
+  width:clamp(16ch, 100%, 36ch);
   color: var(--lightGrey);
   padding:10px;
 }
@@ -92,7 +91,7 @@ p {
   border:0;
   font-size:20px;
   text-align:center;
-  background-color: hsl(216, 12%, 27%);
+  background-color: var(--bg-grey);
   transition: 0.9s;
 }
 
@@ -116,39 +115,53 @@ p {
   border-radius: 20px;
   align-self:center;
   text-transform: uppercase;
+  cursor:pointer;
   transition: 0.7s ease;
 }
 
 .submit:hover {
   background-color: var(--white);
   color: var(--orange);
-  cursor:pointer;
 }
 
 #dialog {
-  min-height: 20rem;
-  max-width: 30rem;
+  width:clamp(22rem, 50%, 25rem);
+  height:clamp(20rem, 70%, 25rem);
   background-color: var(--DarkBlue);
   position:relative;
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-around;
+  justify-content:center;
   text-align: center;
+  gap:5px;
+  border:0;
+  border-radius:10px;
   display:none;
   opacity:0;
   transition:0.7s;
 }
+
 #dialog.active {
-  display: block;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
 }
 
+/* For the transition */
 #dialog.active.transition {
   opacity: 1;
 }
 
-#dialog::backdrop {
-  background-color: var(--main-bg);
+#dialog > * {
+  padding:.2rem;
+}
+
+#dialog h2 {
+  background-color:var(--bg-grey);
+  border-radius:10px;
+}
+
+#dialog  h2, #rate span {
+  color:var(--orange);
 }
 
 .attribution {
