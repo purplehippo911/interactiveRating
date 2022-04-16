@@ -32,11 +32,11 @@ Users should be able to:
 ### Screenshot
 Desktop:
 
-![Desktop](screenshot/dekstop.png)
+![Desktop](screenshot/desktop2.png)
 
 Mobile:
 
-![Mobile](screenshot/mobile.png)
+![Mobile](screenshot/mobile2.png)
 
 
 
@@ -123,7 +123,7 @@ I am planning on learning Grid and continuing on to the junior challenges at fro
 
 ## Acknowledgments
 
-This solution helped me quite a lot on my JS and some of my CSS. Heres a link to his/her solution. ![chaw-bot](https://github.com/chaw-bot/interactive-rating-component)
+This solution helped me quite a lot on my JS and some of my CSS. Heres a link to his/her solution[chaw-bot](https://github.com/chaw-bot/interactive-rating-component)
 
 
 
