@@ -18,16 +18,12 @@ buttons.forEach((button) => {
 openDialog.addEventListener('click', () => {
     if (number > 0) {
         card.classList.add('close');
-        card.classList.add('transition');
         dialog.classList.add('active');
-        dialog.classList.add('transition');
     }
 })
 
 // To close the dialog and bring back the card //
 h2.addEventListener('click', () => { 
     card.classList.remove('close');
-    card.classList.remove('transition');
     dialog.classList.remove('active');
-    dialog.classList.remove('transition');
 })
